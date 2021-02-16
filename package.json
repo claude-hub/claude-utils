@@ -1,8 +1,8 @@
 {
-  "name": "claude-utils",
+  "name": "fe-utils",
   "version": "0.0.1",
-  "description": "claude的前端工具库",
-  "main": "dist/claude-utils.js",
+  "description": "前端工具库",
+  "main": "dist/fe-utils.js",
   "scripts": {
     "build:watch": "webpack --watch",
     "build": "webpack",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/claude-hub/claude-utils.git"
+    "url": "git+https://github.com/claude-hub/fe-utils.git"
   },
   "keywords": [
     "utils"
@@ -18,9 +18,9 @@
   "author": "claude",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/claude-hub/claude-utils/issues"
+    "url": "https://github.com/claude-hub/fe-utils/issues"
   },
-  "homepage": "https://github.com/claude-hub/claude-utils#readme",
+  "homepage": "https://claude-gitee.gitee.io/utils",
   "dependencies": {
     "webpack": "^5.22.0",
     "webpack-cli": "^4.5.0"
