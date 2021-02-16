@@ -7,7 +7,7 @@
 function throttle(fn, time) {
   let timer = null;
 
-  return (...args) => {
+  return function (...args) {
     if (!timer) {
       fn.apply(this, args);
 
@@ -26,10 +26,10 @@ function throttle(fn, time) {
  */
 function debounce(fn, time) {
   let timer = null
-  
-  return (...args) => {
+
+  return function (...args) {
     // 重新执行并停止上次执行（若上次还未执行则会被清除）
-    if(timer){
+    if (timer) {
       clearTimeout(timer)
     }
 

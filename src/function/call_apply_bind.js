@@ -29,13 +29,13 @@ Function.prototype.myApply = function (context) {
   return result;
 };
 
-Function.prototype.myBind = function(context) {
+Function.prototype.myBind = function (context) {
   const _this = this; // this 即 f.myBind 的 f
   const args = [...arguments].slice(1);
   return function F() {
-      if (this instanceof F) {
-          return new _this(...args, ...arguments);
-      }
-      return _this.myApply(context, args.concat(...arguments));
+    if (this instanceof F) {
+      return new _this(...args, ...arguments);
+    }
+    return _this.myApply(context, args.concat(...arguments));
   }
 };
