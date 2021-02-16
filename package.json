@@ -1,7 +1,7 @@
 {
-  "name": "fe-utils",
+  "name": "fe-common-utils",
   "version": "0.0.1",
-  "description": "前端工具库",
+  "description": "前端基础工具库",
   "main": "dist/fe-utils.js",
   "scripts": {
     "build:watch": "webpack --watch",
