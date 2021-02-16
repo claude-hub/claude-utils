@@ -1,4 +1,4 @@
-require('../index');
+require('../call_apply_bind');
 
 const obj = {
   c: 3
