@@ -1,12 +1,14 @@
 {
-  "name": "fe-common-utils",
-  "version": "0.0.1",
+  "name": "@zhangyp/fe-utils",
+  "version": "0.0.2",
   "description": "前端基础工具库",
   "main": "dist/fe-utils.js",
   "scripts": {
     "build:watch": "webpack --watch",
     "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "test:coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -21,7 +23,8 @@
     "url": "https://github.com/claude-hub/fe-utils/issues"
   },
   "homepage": "https://claude-gitee.gitee.io/utils",
-  "dependencies": {
+  "devDependencies": {
+    "jest": "^26.6.3",
     "webpack": "^5.22.0",
     "webpack-cli": "^4.5.0"
   }
