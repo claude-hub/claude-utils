@@ -1,6 +1,6 @@
 # 前端基础工具库
 
-| 文档地址: https://claude-gitee.gitee.io/utils
+| 文档地址: https://claude-gitee.gitee.io/utils/Function.html
 
 | deploy
 ```
