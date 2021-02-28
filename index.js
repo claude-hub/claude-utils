@@ -78,7 +78,7 @@ function mergeSort1(arr) {
 }
 // 合并两个数组
 function merge(arr1, arr2) {
-  var result = [];
+  const result = [];
   while (arr1.length > 0 && arr2.length > 0) {
     if (arr1[0] < arr2[0]) {
       result.push(arr1.shift());
@@ -133,7 +133,7 @@ console.log(fibonacci1(20))
  * 挪动的过程中记录最大长度
  * @param {*} s 
  */
-var lengthOfLongestSubstring = function (s) {
+const lengthOfLongestSubstring = function (s) {
   let arr = [], max = 0
   for (let i = 0; i < s.length; i++) {
     let index = arr.indexOf(s[i])
@@ -147,7 +147,7 @@ var lengthOfLongestSubstring = function (s) {
 };
 
 
-var lengthOfLongestSubstring = function (s) {
+const lengthOfLongestSubstring = function (s) {
   let map = new Map(), max = 0
   for (let i = 0, j = 0; j < s.length; j++) {
     if (map.has(s[j])) {
@@ -162,3 +162,36 @@ var lengthOfLongestSubstring = function (s) {
 console.log(lengthOfLongestSubstring("loddktdji"))
 console.log(lengthOfLongestSubstring("dvdf"))
 console.log(lengthOfLongestSubstring("adfafwefffdasdcx"))
+
+
+/**
+ * 深度优先
+ * @param {*} node 
+ */
+function deepTraversal(node) {  
+  const nodeList = [];  
+  if (node) {  
+      const stack = [];  
+      stack.push(node);  
+      while (stack.length != 0) {  
+          const childrenItem = stack.pop();  
+          nodeList.push(childrenItem);  
+          const childrenList = childrenItem.children;  
+          for (const i = childrenList.length - 1; i >= 0; i--)  
+              stack.push(childrenList[i]);  
+      }  
+  }    
+  return nodeList;  
+}
+
+
+function deepFirstSearch(node, nodeList) {
+  if (node) {
+    nodeList.push(node);
+    const children = node.children;
+    for (const i = 0; i < children.length; i++)
+      //每次递归的时候将 需要遍历的节点 和 节点所存储的数组传下去
+      deepFirstSearch(children[i], nodeList);
+  }
+  return nodeList;
+}
